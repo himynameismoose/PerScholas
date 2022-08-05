@@ -1,4 +1,4 @@
-package inheritancedemo;
+package assignments.monsters.inheritancedemo;
 
 public class Surgeon extends Doctor {
 

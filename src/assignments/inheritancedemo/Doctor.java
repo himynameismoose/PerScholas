@@ -1,4 +1,4 @@
-package assignments.monsters.inheritancedemo;
+package assignments.inheritancedemo;
 
 public class Doctor {
     String DoctorName;

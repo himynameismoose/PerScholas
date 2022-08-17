@@ -54,23 +54,20 @@ public class Account extends Thread {
     @Override
     public void run() {
 
-        String name = Thread.currentThread().getName();
+        try {
+            String name = Thread.currentThread().getName();
 
-        while (balance > 0) {
-            System.out.println(name + " is going to withdraw");
-
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            while (balance > 0) {
+                System.out.println(name + " is going to withdraw");
+                sleep(100);
+                System.out.println(name + " completes the withdrawal");
+                balance -= 10;
             }
 
-            System.out.println(name + " completes the withdrawal");
-            balance -= 10;
-        }
-
-        if (balance <= 0) {
             System.out.println("Not enough in account for " + name + " to withdraw 0");
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

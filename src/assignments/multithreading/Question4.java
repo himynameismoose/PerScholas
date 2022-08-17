@@ -43,6 +43,7 @@ public class Question4 extends Thread {
         Thread t3 = new Question4();
         t3.setPriority(Thread.MAX_PRIORITY);
 
+        // Start Threads
         t1.start();
         t2.start();
         t3.start();

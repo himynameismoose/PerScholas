@@ -1,4 +1,4 @@
-package assignments.multithreading;
+package assignments.multithreading.account;
 
 /**
  * 5. Create a class called Account that represents a bank account. This account starts with a
@@ -33,41 +33,15 @@ package assignments.multithreading;
  *    Not enough in account for Ranjeet to withdraw 0
  *    Not enough in account for Ranjeet to withdraw 0
  */
-public class Account extends Thread {
+public class Account {
 
-    private int balance;
+    private int balance = 50;
 
-    public Account() {
-        balance = 50;
+    public int getBalance() {
+        return balance;
     }
 
-    public static void main(String[] args) {
-        Account t1 = new Account();
-        t1.setName("Reema");
-        t1.start();
-
-        Account t2 = new Account();
-        t2.setName("Ranjeet");
-        t2.start();
-    }
-
-    @Override
-    public void run() {
-
-        try {
-            String name = Thread.currentThread().getName();
-
-            while (balance > 0) {
-                System.out.println(name + " is going to withdraw");
-                sleep(100);
-                System.out.println(name + " completes the withdrawal");
-                balance -= 10;
-            }
-
-            System.out.println("Not enough in account for " + name + " to withdraw 0");
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void withdraw(int amount) {
+        balance = balance - amount;
     }
 }

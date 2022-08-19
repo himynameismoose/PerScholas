@@ -32,6 +32,24 @@ public class CustomerDAOSub extends AbstractCustomerDAO implements CustomerDAOI 
 
     @Override
     public boolean addCustomer(Customers c) {
+
+        try {
+            connect();
+            ps = conn.prepareStatement(SQL.ADD_CUSTOMER.getQuery());
+            ps.setInt(1, c.getCustomerNumber());
+            ps.setString(2, c.getcName());
+            ps.setString(3, c.getLastName());
+            ps.setString(4, c.getFirstName());
+            ps.setString(5, c.getPhone());
+            ps.setString(6, c.getAddress());
+            ps.setString(7, c.getCity());
+            ps.setString(8, c.getCountry());
+
+            rs = ps.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return false;
     }
 

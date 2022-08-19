@@ -55,6 +55,25 @@ public class CustomerDAOSub extends AbstractCustomerDAO implements CustomerDAOI 
 
     @Override
     public boolean removeCustomer(int customerNumber) {
-        return false;
+        boolean remove = false;
+
+        try {
+            connect();
+            ps = conn.prepareStatement(SQL.REMOVE_CUSTOMER.getQuery());
+            ps.setInt(1, customerNumber);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                remove = true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnection();
+        }
+
+        return remove;
     }
 }

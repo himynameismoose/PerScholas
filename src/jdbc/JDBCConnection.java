@@ -19,7 +19,5 @@ public class JDBCConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 }

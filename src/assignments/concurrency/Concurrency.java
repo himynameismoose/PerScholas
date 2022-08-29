@@ -6,8 +6,17 @@ public class Concurrency implements Runnable {
         System.out.println("Hello World");
     }
 
-    public static void main(String[] args) {
-        Thread t = new Thread(new Concurrency());
-        t.start();
+    public static void main(String[] args) throws InterruptedException {
+        // Start Thread
+        Thread thread = new Thread(new Concurrency());
+        System.out.println("Running thread 1a");
+        thread.start();
+
+        // Start 5 Threads
+        for (int i = 1; i <= 5; i++) {
+            Thread t = new Thread(new Concurrency());
+            System.out.println("Running thread: " + t.getName());
+            t.start();
+        }
     }
 }

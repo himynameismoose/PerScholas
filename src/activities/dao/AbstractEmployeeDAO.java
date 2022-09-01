@@ -1,8 +1,11 @@
 package activities.dao;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-public class AbstractCustomerDAO {
+public class AbstractEmployeeDAO {
     private final String URL =  "jdbc:mysql://localhost:3306/classicmodels";
     private final String USER = "root";
     private final String PASS = "password";

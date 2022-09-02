@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #B7DA32;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    .form-container {
+        background-color: #E8E8E8;
+        margin: 150px;
+        padding: 40px;
+        align-items: center;
+        box-shadow: 10px 5px 2px 0 grey;
+    }
+    img {
+        border-radius: 50%;
+        background-color: #14A8AF;
+        height: 100px;
+        box-shadow: 10px 7px 4px 0 grey;
+        
+    }
+    .icon {
+        vertical-align: top;
+        margin: -50px 0 20px 0;
+        padding: 50px;
+        padding-bottom: 45px;
+        margin: -150px 0;
+    }
+    form {
+        text-align: center;
+        padding-top: 100px;
+        font-family: 'Roboto';
+        font-size: 9px;
+        text-decoration: none;
+    }
+    input {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border: none;
+        height: 40px;
+        width: 100%;
+        background-color: #D3D3D3;
+    }
+    .btn {
+        background-color: #56C9E4;
+        color: white;
+    }
+    .forgot {
+        text-decoration: none;
+        color: red;
+        font-size: 12px;
+    } 
+</style>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="icon">
+                <img src="assets/images/icon.png" alt="icon">
+            </div>
+            <form>
+                <h1>User Login</h1>
+                <div class="form">
+                    <input class="txt" type="text" placeholder="Username"><br>
+                    <input class="txt" type="password" placeholder="Password"><br>
+                    <input class="btn" type="submit" value="LOGIN"><br>
+                    <a class="forgot" href="#">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

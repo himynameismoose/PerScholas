@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment</title>
+</head>
+<body>
+    <h1>Investment</h1>
+    <script type="text/javascript">
+        var initialBalance = 10000;
+        const interest = 0.05;
+        var years = 0;
+        var balanceGoal = 20000;
+
+        while (initialBalance <= balanceGoal) {
+            initialBalance += initialBalance * interest;
+            years++;
+        }
+
+        console.log(years);
+    </script>
+</body>
+</html>

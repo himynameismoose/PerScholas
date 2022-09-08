@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Numbers</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Print all the even numbers from 0 to 100.
+        for (var i = 0; i <= 100; i += 2) {
+            console.log(i);
+        }
+
+        // Print all odd number from 0 to 100.
+        for (var i = 0; i <= 100; i++) {
+            if (i % 2 == 1) {
+                console.log(i);
+            }
+        }
+
+        // Given a prime, determine if this number is prime: print Yes or No
+        var number = 5;
+        if (number > 1 ) {
+            for (var i = 2; i <= number; i++) {
+                if (number % 2 == 0) {
+                    console.log("No");
+                    break;
+                } else {
+                    console.log("Yes");
+                    break;
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>
